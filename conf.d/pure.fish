@@ -16,10 +16,11 @@ _pure_set_default pure_symbol_prompt "❯"
 _pure_set_default pure_symbol_reverse_prompt "❮" # used for VI mode
 _pure_set_default pure_color_prompt_on_error pure_color_danger
 _pure_set_default pure_color_prompt_on_success pure_color_success
+_pure_set_default pure_color_prompt_on_error_sep pure_color_mute
 
 # Current Working Directory
 _pure_set_default pure_color_current_directory pure_color_primary
-_pure_set_default pure_shorten_prompt_current_directory_length 0
+_pure_set_default pure_shorten_prompt_current_directory_length 4
 _pure_set_default pure_truncate_prompt_current_directory_keeps -1
 
 # Git
@@ -33,7 +34,7 @@ _pure_set_default pure_color_git_unpushed_commits pure_color_info
 _pure_set_default pure_color_git_branch pure_color_mute
 _pure_set_default pure_color_git_dirty pure_color_mute
 _pure_set_default pure_color_git_stash pure_color_info
-_pure_set_default pure_show_numbered_git_indicator false
+_pure_set_default pure_show_numbered_git_indicator true
 
 # Remote info (user@hostname) for SSH and containers (Docker/LXC)
 _pure_set_default pure_color_hostname pure_color_mute
@@ -42,7 +43,7 @@ _pure_set_default pure_color_username_normal pure_color_mute
 _pure_set_default pure_color_username_root pure_color_light
 
 # Number of running jobs
-_pure_set_default pure_show_jobs false
+_pure_set_default pure_show_jobs true
 _pure_set_default pure_color_jobs pure_color_normal
 
 # Show system time
@@ -50,8 +51,8 @@ _pure_set_default pure_show_system_time false
 _pure_set_default pure_color_system_time pure_color_mute
 
 # Nix build environment
-_pure_set_default pure_enable_nixdevshell false
-_pure_set_default pure_symbol_nixdevshell_prefix "❄️" # otherwise nerdfonts: '󱄅' or ''
+_pure_set_default pure_enable_nixdevshell true
+_pure_set_default pure_symbol_nixdevshell_prefix "nix:" # ❄️ otherwise nerdfonts: '󱄅' or ''
 _pure_set_default pure_color_nixdevshell_prefix pure_color_info
 _pure_set_default pure_color_nixdevshell_symbol pure_color_mute
 
@@ -73,10 +74,10 @@ _pure_set_default pure_begin_prompt_with_current_directory true
 # Show exit code of last command as a separate prompt character (cf. https://github.com/sindresorhus/pure/wiki#show-exit-code-of-last-command-as-a-separate-prompt-character)
 # false - single prompt character, default
 # true - separate prompt character
-_pure_set_default pure_separate_prompt_on_error false
+_pure_set_default pure_separate_prompt_on_error true
 
 # Max execution time of a process before its run time is shown when it exits
-_pure_set_default pure_threshold_command_duration 5
+_pure_set_default pure_threshold_command_duration 1
 _pure_set_default pure_show_subsecond_command_duration false
 _pure_set_default pure_color_command_duration pure_color_warning
 
@@ -87,14 +88,14 @@ _pure_set_default pure_reverse_prompt_symbol_in_vimode true
 
 # Title
 _pure_set_default pure_symbol_title_bar_separator -
-_pure_set_default pure_shorten_window_title_current_directory_length 0
+_pure_set_default pure_shorten_window_title_current_directory_length 2
 _pure_set_default pure_truncate_window_title_current_directory_keeps -1
 
 # Check for new release on startup
 _pure_set_default pure_check_for_new_release false
 
 # Prefix prompt when logged in as root
-_pure_set_default pure_show_prefix_root_prompt false
+_pure_set_default pure_show_prefix_root_prompt true
 _pure_set_default pure_symbol_prefix_root_prompt "#"
 _pure_set_default pure_color_prefix_root_prompt pure_color_danger
 
@@ -106,7 +107,7 @@ _pure_set_default pure_enable_container_detection true
 _pure_set_default pure_symbol_container_prefix "" # suggestion: '🐋' or '📦'
 
 # Detect when running in SSH
-_pure_set_default pure_symbol_ssh_prefix "" # suggestion: 'ssh:/' or '🔗🔐🔒🌐'
+_pure_set_default pure_symbol_ssh_prefix "ssh:" # suggestion: 'ssh:/' or '🔗🔐🔒🌐'
 
 # Display Kubernetes/k8s context and namespace
 _pure_set_default pure_enable_k8s false
